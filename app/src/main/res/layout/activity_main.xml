@@ -6,8 +6,20 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#160F0F"
+    android:background="#000000"
     tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="59dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/checkout" />
 
     <EditText
         android:id="@+id/search"
@@ -29,7 +41,8 @@
         android:layout_height="31dp"
         android:fontFamily="@font/limelight_regular"
         android:gravity="center"
-        android:text="410-xxx-xxx"
+        android:text="410-218-3617"
+        android:autoLink="phone"
         android:textColor="#00FF08"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +73,8 @@
         android:layout_marginTop="12dp"
         android:fontFamily="@font/limelight_regular"
         android:gravity="center"
-        android:text="456 Dundalk Ln."
+        android:text="456 Dundalk Ave Baltimore, Baltimore,MD"
+        android:autoLink="map"
         android:textColor="#CDDC39"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -105,7 +119,7 @@
             <ImageView
                 android:id="@+id/pepperoniPizza"
                 android:layout_width="match_parent"
-                android:layout_height="771dp"
+                android:layout_height="400dp"
                 app:srcCompat="@drawable/pep" />
 
             <Button
