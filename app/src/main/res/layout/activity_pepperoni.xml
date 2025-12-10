@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/pepperoniPizza"
-        android:layout_width="406dp"
-        android:layout_height="319dp"
+        android:layout_width="367dp"
+        android:layout_height="293dp"
         android:layout_marginEnd="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,25 +30,126 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pepperoniPizza" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="343dp"
-        android:layout_height="253dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:text="Enjoy our delicious pepperoni pizza for just 10$!"
-        android:textSize="45dp"
-        app:layout_constraintEnd_toEndOf="parent"
+    <Button
+        android:id="@+id/menu"
+        android:layout_width="92dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#818080"
+        android:text="@string/menu"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_width="205dp"
-        android:layout_height="126dp"
-        android:layout_marginTop="4dp"
-        android:text="go back to return to menu"
+    <Button
+        android:id="@+id/Add"
+        android:layout_width="397dp"
+        android:layout_height="38dp"
+        android:text="Add To Cart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:layout_width="390dp"
+        android:layout_height="265dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/ExtraPepperoni"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/ExtraPep"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/addFee1.5"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text=" +1.5$ " />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/ExtraCheese"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ExtraC"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/addFee1.5"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text=" +1.5$ "
+                tools:ignore="DuplicateIds" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/Sausage"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:text="@string/sausage"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/addFee1.5"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text=" +1.5$ "
+                tools:ignore="DuplicateIds" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/olives"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/addFee1.5"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text=" +1.5$ "
+                tools:ignore="DuplicateIds" />
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

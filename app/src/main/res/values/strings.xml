@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Pokus Pizza</string>
+    <string name="olives">Olives</string>
+    <string name="sausage">Sausage</string>
+    <string name="ExtraC">ExtraCheese</string>
+    <string name="ExtraPep">ExtraPepperoni</string>
+    <string name="menu">menu</string>
 </resources>
