@@ -43,11 +43,11 @@ public class PepperoniActivity extends AppCompatActivity {
                     total -= 1.50;
                     Toast.makeText(this, "Extra pepperoni removed", Toast.LENGTH_SHORT).show();
                 }
+                Add.setText(getStirng(R.string.addCart) + "+" + total +"(" + total-10 + ")";
 
             }
         });    
         ExtraCheese.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            double total=10;
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 if (isChecked) {
@@ -58,7 +58,7 @@ public class PepperoniActivity extends AppCompatActivity {
                     total -= 1.50;
                     Toast.makeText(this, "Extra pepperoni removed", Toast.LENGTH_SHORT).show();
                 }
-
+                Add.setText(getStirng(R.string.addCart) + "+" + total +"(" + total-10 + ")";
             }
         });    
         Sausage.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -72,7 +72,8 @@ public class PepperoniActivity extends AppCompatActivity {
                     total -= 1.50;
                     Toast.makeText(this, "Extra pepperoni removed", Toast.LENGTH_SHORT).show();
                 }
-
+                Add.setText(getStirng(R.string.addCart) + "+" + total +"(" + total-10 + ")";
+              
             }
         });    
         Olives.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -86,13 +87,23 @@ public class PepperoniActivity extends AppCompatActivity {
                     total -= 1.50;
                     Toast.makeText(this, "Extra pepperoni removed", Toast.LENGTH_SHORT).show();
                 }
-                Add.setText(
+                Add.setText(getStirng(R.string.addCart) + "+" + total +"(" + total-10 + ")";
 
             }
         });    
+        
+        Add.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+        Intent cart = new Intent(PepperoniActivity.this, CartActivity.class);
 
+            cart.putExtra("ITEM_NAME",
+            cart.putExtra("IMAGE",
+            cart.putExtra(
+            }
+            });
 
-
+        
 
 
         /*new CountDownTimer(1001, 1000)
