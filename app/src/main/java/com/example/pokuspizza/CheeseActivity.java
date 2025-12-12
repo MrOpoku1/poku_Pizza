@@ -10,10 +10,105 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class CheeseActivity extends AppCompatActivity {
 
+    CheckBox ExtraPepperoni, ExtraCheese, Sausage, Olives;
+    Button Add;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        ExtraPepperoni = (CheckBox)findViewById(R.id.ExtraPepperoni);
+        ExtraCheese = (CheckBox)findViewById(R.id.ExtraCheese);
+        Sausage = (CheckBox)findViewById(R.id.Sausage);
+        Olives = (CheckBox)findViewById(R.id.Olives);
+        Add = (Button)findViewById(R.i.Add);
 
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cheese);
+
+        double total = 10
+
+        ExtraPepperoni.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (isChecked) {
+                    total += 1.50;
+                    Toast.makeText(, "Extra pepperoni added!", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Remove the cost
+                    total -= 1.50;
+                    Toast.makeText(this, "Extra pepperoni removed", Toast.LENGTH_SHORT).show();
+                }
+                Add.setText(getStirng(R.string.addCart) + "+" + total +"(" + total-10 + ")";
+
+            }
+        });    
+        ExtraCheese.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (isChecked) {
+                    total += 1.50;
+                    Toast.makeText(, "Extra Cheese added!", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Remove the cost
+                    total -= 1.50;
+                    Toast.makeText(this, "Extra Cheese removed", Toast.LENGTH_SHORT).show();
+                }
+                Add.setText(getStirng(R.string.addCart) + "+" + total +"(" + total-10 + ")";
+            }
+        });    
+        Sausage.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (isChecked) {
+                    total += 1.50;
+                    Toast.makeText(, "Sausage added!", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Remove the cost
+                    total -= 1.50;
+                    Toast.makeText(this, "Sausage removed", Toast.LENGTH_SHORT).show();
+                }
+                Add.setText(getStirng(R.string.addCart) + "+" + total +"(" + total-10 + ")";
+              
+            }
+        });    
+        Olives.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (isChecked) {
+                    total += 1.50;
+                    Toast.makeText(, "Olives added!", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Remove the cost
+                    total -= 1.50;
+                    Toast.makeText(this, "Olives removed", Toast.LENGTH_SHORT).show();
+                }
+                Add.setText(getStirng(R.string.addCart) + "+" + total +"(" + total-10 + ")");
+
+            }
+        });    
+        
+        Add.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+        Intent cart = new Intent(PepperoniActivity.this, CartActivity.class);
+
+            cart.putExtra("ITEM_NAME2","Cheese Pizza")
+            cart.putExtra("cHEESE_IMG",R.drawable.pep);
+            cart.putExtra("COST2",total);
+            Toast.makeText(this, "Added To Cart", Toast.LENGTH_SHORT).show();
+            startActivity(cart);
+            }
+            });
+
+        
+
+
+        /*new CountDownTimer(1001, 1000)
+            {
+                public void onTick(long millisUntilFinished) {toast.show();}
+                public void onFinish() {toast.cancel();}
+            }.start(); */
+    
     }
+
 }
