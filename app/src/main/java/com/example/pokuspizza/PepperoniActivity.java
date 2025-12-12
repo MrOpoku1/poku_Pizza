@@ -87,7 +87,7 @@ public class PepperoniActivity extends AppCompatActivity {
                     total -= 1.50;
                     Toast.makeText(this, "Extra pepperoni removed", Toast.LENGTH_SHORT).show();
                 }
-                Add.setText(getStirng(R.string.addCart) + "+" + total +"(" + total-10 + ")";
+                Add.setText(getStirng(R.string.addCart) + "+" + total +"(" + total-10 + ")");
 
             }
         });    
@@ -97,9 +97,10 @@ public class PepperoniActivity extends AppCompatActivity {
         public void onClick(View v) {
         Intent cart = new Intent(PepperoniActivity.this, CartActivity.class);
 
-            cart.putExtra("ITEM_NAME",
-            cart.putExtra("IMAGE",
-            cart.putExtra(
+            cart.putExtra("ITEM_NAME","pepperoni Pizza")
+            cart.putExtra("PEPPERONI_IMG",R.drawable.pep);
+            cart.putExtra("COST",total);
+            startActivity(cart);
             }
             });
 
