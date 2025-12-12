@@ -100,6 +100,7 @@ public class PepperoniActivity extends AppCompatActivity {
             cart.putExtra("ITEM_NAME","pepperoni Pizza")
             cart.putExtra("PEPPERONI_IMG",R.drawable.pep);
             cart.putExtra("COST",total);
+            Toast.makeText(this, "Added To Cart", Toast.LENGTH_SHORT).show();
             startActivity(cart);
             }
             });
